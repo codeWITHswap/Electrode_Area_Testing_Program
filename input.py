@@ -77,11 +77,6 @@ def process_test_img(img_name, scaling_factor, minDist_usr, param1_usr, param2_u
         sheet.cell(row=current_row+1, column=5).value = contour_areas[-2]
         wb.save(filename = 'Results.xlsx')
                 
-        size = len(img_name)
-        contour_name = img_name[:size-4]+"_contour.jpg"
-        cv2.imwrite(contour_name,imgContour)
-
-
 # get the path to the folder
 path1 = input("Path to Image Folder: ")
 ref_area = int(input("Reference Area: "))
